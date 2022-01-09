@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Downloader View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImageDownloaderViewController" customModule="ImageDownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Li1-fg-haz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6K6-QV-OIj">
+                                        <rect key="frame" x="141.5" y="399" width="131.5" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="5bP-ls-Md5"/>
+                                            <constraint firstAttribute="height" constant="20" id="Cbb-Cg-8Le"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Download Image"/>
+                                        <connections>
+                                            <action selector="startDownloadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7tY-cD-cbx"/>
+                                        </connections>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="kIY-ar-oBr">
+                                        <rect key="frame" x="132" y="355" width="150" height="4"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Ivi-EC-v9v"/>
+                                        </constraints>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6K6-QV-OIj" firstAttribute="centerY" secondItem="Li1-fg-haz" secondAttribute="centerY" id="Mjm-7T-KbU"/>
+                                    <constraint firstItem="6K6-QV-OIj" firstAttribute="centerX" secondItem="Li1-fg-haz" secondAttribute="centerX" id="Ohh-sx-FmL"/>
+                                    <constraint firstItem="6K6-QV-OIj" firstAttribute="top" secondItem="kIY-ar-oBr" secondAttribute="bottom" constant="40" id="QJm-xJ-fmT"/>
+                                    <constraint firstItem="kIY-ar-oBr" firstAttribute="centerX" secondItem="6K6-QV-OIj" secondAttribute="centerX" id="VXc-3U-qOf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Li1-fg-haz" secondAttribute="bottom" id="MDG-0G-xtc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Li1-fg-haz" secondAttribute="trailing" id="ddN-A4-ioN"/>
+                            <constraint firstItem="Li1-fg-haz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g1e-ve-vQg"/>
+                            <constraint firstItem="Li1-fg-haz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ve4-Jh-f6a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ImageProgressView" destination="kIY-ar-oBr" id="ZaP-Lg-MNg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
